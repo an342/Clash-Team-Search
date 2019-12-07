@@ -1,13 +1,5 @@
-'''
-ToDO
-1. upload to github
-2. make install instructions
-
-'''
-
 import webbrowser
 import codecs
-
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Functions
@@ -25,9 +17,6 @@ def MOBALink(summoner, region):
   summoner.replace(" ", "%20")
   link = "https://app.mobalytics.gg/profile/" + region + "/" + summoner
   return link
-  
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Variables
@@ -47,6 +36,8 @@ controllerNW = webbrowser.get(chrome_path_NW)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #Main
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+print("Please update the names in 'Summoners.txt' now.")
+input("Press Enter to continue...")
 
 while True:
   print ("list of supported regions:")
@@ -90,7 +81,9 @@ if "OP" in sites2use:
     elif index > 0:
       controller.open(OPLink(i, region))
     index += 1
-  
+
+index = 0
+
 if "MOBAL" in sites2use:
   for i in lines:
     if index == 0:
